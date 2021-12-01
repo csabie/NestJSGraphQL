@@ -13,6 +13,21 @@ import { OwnersModule } from './owners/owners.module';
     GraphQLModule.forRoot({
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
+    //egy valós MySql esetén így kellene kezelni
+    // TypeOrmModule.forRoot({
+    //   type: 'mysql',
+    //   host: 'localhost',
+    //   username: 'root',
+    //   password: password,
+    //   database: 'the_local_db',
+    //   entities: [
+    //     Table_one,
+    //   ],
+    //   // entities: ['../typeorm/entities/*.ts'],
+
+    //   synchronize: true,
+    // }),
+
     // a TypeOrm egy sqlite driver
     TypeOrmModule.forRoot({
       type: 'sqlite',
